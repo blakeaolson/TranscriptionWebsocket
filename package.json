@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@deepgram/sdk": "^3.11.2",
+    "deepgram": "^1.0.3",
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.1"
+  },
+  "type": "module"
+}
