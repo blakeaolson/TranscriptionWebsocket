@@ -1,9 +1,11 @@
 import { LiveTranscriptionEvents } from "@deepgram/sdk";
+import dotenv from "dotenv";
 
+dotenv.config()
 export async function setupDeepgram(socket) {
   const { createClient } = await import("@deepgram/sdk");
 
-  const deepgramClient = createClient("f565577393792cba61dfc9dd3e18e2b44b56e968");
+  const deepgramClient = createClient(process.env.DEEPGRAM_API_KEY);
 
   const deepgram = deepgramClient.listen.live({
     model: "nova-general",
